@@ -17,7 +17,6 @@ class ReadTrainingSessions(BaseModel):
 class CreateTrainingSessions(BaseModel):
     session_type: str
     actual_calories_burned: float
-    predicted_calories_burned: float
     climb: float
     duration: float
     distance: float

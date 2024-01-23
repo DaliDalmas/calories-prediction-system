@@ -11,12 +11,10 @@ def get_training_session(db: Session, training_session_id: int):
 
 def create_training_session(db: Session, training_session: schemas.CreateTrainingSessions):
 
-    predict_calories(training_session)
-    
     db_training_session = models.TrainingSessions(
         session_type = training_session.session_type,
         actual_calories_burned = training_session.actual_calories_burned,
-        predicted_calories_burned = training_session.predicted_calories_burned,
+        predicted_calories_burned = predict_calories(training_session.dict()),
         climb = training_session.climb,
         duration = training_session.duration,
         distance = training_session.distance,
