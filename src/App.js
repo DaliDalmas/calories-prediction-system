@@ -1,8 +1,8 @@
-import './App.css';
+
 import Questionare from './pages/Questionare';
 function App() {
   return (
-    <div className="App">
+    <div className=" flex flex-col justify-center items-center">
       <Questionare />
     </div>
   );

@@ -1,6 +1,6 @@
 export default function Questionare(){
     return (
-        <div className="">
+        <div className="bg-sky-300">
             {/* Question 1 */}
             <label>Kind of exercise</label>
             <select name="cars" id="cars" form="carform">
